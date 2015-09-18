@@ -1,0 +1,35 @@
+$font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Colors
+$black:         	#000;
+$white:						#fff;
+$gray-darker:			#222;
+$gray-dark:     	#333;
+$gray:          	#666;
+$gray-light:			#aaa;
+$gray-lighter:		#ccc;
+$gray-lightest:		#eee;
+
+// https://flatuicolors.com/
+$emerald:					#2ecc71;
+$peter-river:			#3498db;
+$pomegranate:			#34495e;
+$midnight-blue:		#2c3e50;
+$silver:					#bdc3c7;
+
+// Theme
+$webzorro-red: 		#d3331c; 
+
+// Buttons
+$btn-new-color:         $white;
+$btn-new-bg:            $emerald;
+
+$btn-edit-color:       	$white;
+$btn-edit-bg:           $peter-river;
+
+$btn-delete-color:      $white;
+$btn-delete-bg:         $pomegranate;
+
+$btn-login-color:				$white;
+$btn-login-bg:					$midnight-blue;
+

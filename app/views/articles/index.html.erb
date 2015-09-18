@@ -1,0 +1,39 @@
+<section id="wrapper">
+
+  <% if user_signed_in? %>
+    <p id="user">Logged in as <strong><%= current_user.email %></strong>.</p>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link', :id => 'btn-logout' %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link', :id => 'btn-login' %>
+  <% end %>
+
+  <h1>Blog</h1>
+
+  <% if user_signed_in? %>
+    <p><%= link_to 'New article', new_article_path, :class => 'btn btn-new' %></p>  
+  <% end %>
+
+  <ol class="blog-list">
+
+    <% @articles.each do |article| %>
+      <li>
+
+        <%= link_to article_path(article) do %>
+
+          <h2><%= article.title %></h2>
+          <p><%= truncate_html raw(article.text), :length => 220 %></p>
+
+        <% end %>
+        
+
+        <% if user_signed_in? %>
+          <p><%= link_to 'Edit', edit_article_path(article), :class => 'btn btn-edit' %>
+          <%= link_to 'Delete', article_path(article), :class => 'btn btn-delete',
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></p>
+        <% end %>
+
+    <% end %>
+  </ol>
+
+</section>

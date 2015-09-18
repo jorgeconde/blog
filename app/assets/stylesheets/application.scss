@@ -1,0 +1,214 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'globals';
+
+/* 1. Basic  ------------------------------------------------------- */
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	font: 100% $font-stack;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pl0 {
+	padding-left: 0 !important;
+}
+
+.unit {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* 2. Typography
+      Vertical rhythm with leading derived from 6
+--------------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 {
+	color: $gray-dark;
+}
+
+h1, h1 a {
+	padding-bottom: 15px;
+  margin-bottom: 0;
+  border-bottom: 1px solid $gray-lightest;
+  color: $webzorro-red;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+p {
+	color: $gray;
+	line-height: 1.6875;
+}
+
+/* 3. List  ------------------------------------------------------------ */
+
+/* 4. Grid  ------------------------------------------------------------ */
+
+.size1of2 {
+	width: 50%;
+}
+
+/* 5. Media   ---------------------------------------------------------- */
+
+/* 6. Buttons  --------------------------------------------------------- */
+.btn {
+	position: relative;
+	padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.35;
+  border-radius: 3px;
+  text-decoration: none;
+  border: none;
+}
+.btn-large {
+	font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 18px;
+  cursor: pointer;
+  margin-right: 18px;
+  border: 0 none;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 15px;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+}
+
+/* 7. Forms  ----------------------------------------------------------- */
+.login-content {
+	max-width: 450px;
+  margin: 0 auto;
+}
+.login-content .logo {
+	display: block;
+	margin: 50px auto;
+	width: 50%;
+}
+.login-content .field input {
+	display: inline-block;
+  padding: 0 .4em 0 .4em;
+  margin-bottom: 2em;
+  vertical-align: middle;
+  border-radius: 3px;
+  min-width: 50px;
+  width: 100%;
+  min-height: 32px;
+  background-color: $white;
+  border: 2px solid $gray-lighter;
+  margin: 0 0 24px 0;
+  font-size: 13px;
+}
+.login-content .field input:hover {
+	border-color: $gray-light;
+}
+.login-content .field input:focus {
+	outline: 0;
+	border: 2px solid $peter-river;
+}
+.login-content .field label {
+	color: $gray;
+  font-weight: 600;
+  display: block;
+  max-width: 635px;
+  padding-bottom: 8px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.login-content .field input[type=submit] {
+	border: none;
+}
+.login-content .field input[type=checkbox] {
+	width: auto;
+	margin: 4px;
+	margin-left: 0;
+	float: left;
+}
+.login-content .field.remember {
+	margin-top: 10px;
+}
+.login-content .field.remember label {
+	font-weight: 500;
+	font-size: 15px;
+	float: left;
+}
+.login-content .forgot {
+	clear: left;
+	margin-top: 60px;
+}
+.login-content .forgot a {
+	text-decoration: none;
+	color: $peter-river;
+  font-weight: 400;
+  display: block;
+  padding-bottom: 8px;
+  float: left;
+}
+.login-content .forgot a:hover {
+	color: darken($peter-river, 15%);
+}
+.btn-login {
+  background: $btn-login-bg;
+  color: $btn-login-color;
+}
+.actions .btn-login:hover  {
+	background-color: lighten($btn-login-bg, 10%);
+}
+.actions .btn-login:focus {
+	outline: 0;
+}
+.login-content .return-login {
+	margin-top: 15px;
+}
+.login-content .return-login a {
+	text-decoration: none;
+	color: $peter-river;
+  font-weight: 400;
+  display: block;
+  padding-bottom: 8px;
+  float: left;
+}
+.login-content .return-login a:hover {
+	color: darken($peter-river, 15%);
+}
+

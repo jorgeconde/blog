@@ -1,0 +1,30 @@
+<section id="wrapper">
+	<h1><%= link_to 'Blog', articles_path %></h1>
+	<div class="blog-post">
+		<h2>
+		  <%= @article.title %>
+		</h2>
+		 
+		<p class="article">
+		  <%= raw@article.text %>
+		</p>
+		 
+		<h2 class="comments-title">Comments</h2>
+		<div class="comments">
+			<%= render @article.comments %>
+		</div>
+		 
+		<h4 class="add-comment">Add a comment:</h4>
+		<%= render 'comments/form' %>
+		 
+		<% if user_signed_in? %>
+		  <%= link_to 'Edit', edit_article_path(@article) %> |
+		<% else %>
+
+		<% end %>
+
+		
+
+	</div>
+	
+</section>
