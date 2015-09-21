@@ -1,38 +1,4 @@
 @import 'globals';
-	
-#wrapper {
-	max-width: 600px;
-  margin: 0 auto;
-  padding: 60px 30px 60px 30px;	
-}
-
-#btn-login, #btn-logout {
-	position: fixed;
-  top: 8px;
-  right: 6px;
-  background: $webzorro-red;
-  color: $white;
-  padding: 8px 12px;
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1.35;
-  border-radius: 3px;
-  z-index: 100;
-  text-decoration: none;
-}
-
-.btn-new {
-  background: $btn-new-bg;
-  color: $btn-new-color; 
-}
-.btn-edit {
-  background: $btn-edit-bg;
-  color: $btn-edit-color;
-}
-.btn-delete {
-  background: $btn-delete-bg;
-  color: $btn-delete-color;
-}
 
 #user {
 	position: fixed;
@@ -74,11 +40,6 @@
 .blog-list li:hover h2 {
 	color: $webzorro-red;
 }
-.blog-list a, 
-.blog-list a:hover,
-.blog-list a:focus {
-	text-decoration: none;
-}
 
 /* Show Article */
 .blog-post {padding-top: 80px;}
@@ -86,12 +47,8 @@
 .blog-post h3,h4,h5,h6,strong {color: $gray-dark;}
 .blog-post p.article {padding-bottom: 80px;}
 
-.comments-title {
-  border-top: 1px solid $gray-lightest;
-  padding-top: 20px;
-}
 .comments {
-  margin-left: 35px;
+  margin-left: 10px;
 }
 .comments h3 {
   color: $webzorro-red;
@@ -102,4 +59,40 @@
 }
 .add-comment {
   margin-top: 50px;
+}
+
+/* Edit Article */
+.articles-form {
+  margin-top: 50px;
+}
+.articles-form .field input {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-bottom: 2em;
+  vertical-align: middle;
+  min-width: 50px;
+  width: 100%;
+  min-height: 38px;
+  background-color: $white;
+  border: none;
+  border-bottom: 2px solid $gray-lighter;
+  margin: 0 0 24px 0;
+  font-weight: 600;
+}
+.articles-form .field input:hover {
+  border-color: $gray-light;
+}
+.articles-form .field input:focus {
+  outline: 0;
+  border-bottom: 2px solid $peter-river;
+}
+.articles-form .field label {
+  color: $gray;
+  font-weight: 600;
+  display: block;
+  max-width: 635px;
+  padding-bottom: 8px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

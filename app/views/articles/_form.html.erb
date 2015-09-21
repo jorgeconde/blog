@@ -14,20 +14,19 @@
     </div>
   <% end %>
  
-  <div>
-    <p>
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
-    </p>
+  <div class="articles-form">
+    <div class="field">
+      <%= f.text_field :title, :placeholder => 'Title' %>
+    </div>
    
-    <p >
-      <%= f.label :text %><br>
+    <div class="field">
+      <%= f.label :text %>
       <%= f.cktext_area :text, :ckeditor => {:language => 'en'}, :id => 'editor'%>
-    </p>
+    </div>
    
-    <p>
-      <%= f.submit %>
-    </p>
+    <div class="action">
+      <%= f.submit "Update Article", :class => 'btn btn-update' %>
+    </div>
   </div>
   
  

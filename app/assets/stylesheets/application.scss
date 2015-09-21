@@ -33,10 +33,20 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+a, 
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.unit {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .pull-left {
 	float: left;
 }
-
 .pull-right {
 	float: right;
 }
@@ -44,15 +54,16 @@ body {
 .pl0 {
 	padding-left: 0 !important;
 }
-
-.unit {
-	padding-left: 15px;
-	padding-right: 15px;
+.pr0 {
+  padding-right: 0 !important;
 }
 
-/* 2. Typography
-      Vertical rhythm with leading derived from 6
---------------------------------------------------------------------- */
+.border-top {
+  border-top: 1px solid $gray-lightest;
+  padding-top: 20px;
+}
+
+/* 2. Typography ----------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6 {
 	color: $gray-dark;
@@ -67,18 +78,16 @@ h1, h1 a {
   text-decoration: none;
 }
 
+h1 a {
+  border-bottom: none;
+}
+
 p {
 	color: $gray;
 	line-height: 1.6875;
 }
 
 /* 3. List  ------------------------------------------------------------ */
-
-/* 4. Grid  ------------------------------------------------------------ */
-
-.size1of2 {
-	width: 50%;
-}
 
 /* 5. Media   ---------------------------------------------------------- */
 
@@ -112,6 +121,43 @@ p {
   height: 48px;
   line-height: 49px;
   width: 100%;
+}
+
+/* Fixed buttons */
+#btn-login, #btn-logout {
+  position: fixed;
+  top: 8px;
+  right: 6px;
+  background: $webzorro-red;
+  color: $white;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.35;
+  border-radius: 3px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.btn-new {
+  background: $btn-new-bg;
+  color: $btn-new-color; 
+}
+.btn-edit {
+  background: $btn-edit-bg;
+  color: $btn-edit-color;
+}
+.btn-delete {
+  background: $btn-delete-bg;
+  color: $btn-delete-color;
+}
+.btn-login {
+  background: $btn-login-bg;
+  color: $btn-login-color;
+}
+.btn-update {
+  background: $btn-update-bg;
+  color: $btn-update-color;
 }
 
 /* 7. Forms  ----------------------------------------------------------- */
@@ -187,10 +233,6 @@ p {
 .login-content .forgot a:hover {
 	color: darken($peter-river, 15%);
 }
-.btn-login {
-  background: $btn-login-bg;
-  color: $btn-login-color;
-}
 .actions .btn-login:hover  {
 	background-color: lighten($btn-login-bg, 10%);
 }
@@ -212,3 +254,14 @@ p {
 	color: darken($peter-river, 15%);
 }
 
+/* 4. Grid  ------------------------------------------------------------ */
+
+#wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 30px 60px 30px; 
+}
+
+.size1of2 {
+  width: 50%;
+}
