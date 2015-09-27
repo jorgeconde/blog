@@ -3,6 +3,10 @@
 	<div id="wrapper">
 		<h1><%= link_to 'Blog', articles_path %></h1>
 		<div class="blog-post">
+			<% if user_signed_in? %>
+			  <%= link_to 'Edit', edit_article_path(@article), :class => 'btn btn-edit' %>
+			<% end %>
+
 			<h2>
 			  <%= @article.title %>
 			</h2>
@@ -11,17 +15,17 @@
 			  <%= raw@article.text %>
 			</p>
 			 
-			<h2 class="border-top">Comments</h2>
+			<!--<h2 class="border-top">Comments</h2>
 			<div class="comments">
 				<%= render @article.comments %>
 			</div>
 			 
 			<h4 class="add-comment border-top">Add a comment:</h4>
-			<%= render 'comments/form' %>
+			<%= render 'comments/form' %>-->			
 			 
-			<% if user_signed_in? %>
-			  <%= link_to 'Edit', edit_article_path(@article) %>
-			<% end %>
+		</div>
+		<div id="mydisqus">
+			<%- disqus_thread %>
 		</div>
 	</div>
 

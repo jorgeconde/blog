@@ -33,6 +33,8 @@ gem 'truncate_html'
 
 gem 'puma'
 
+gem 'disqus_rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
