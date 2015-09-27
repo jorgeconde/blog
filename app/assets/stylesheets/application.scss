@@ -45,6 +45,13 @@ a:focus {
   text-decoration: none;
 }
 
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #eee;
+  margin-left: 0;
+}
+blockquote p {margin: 0;}
+
 #mydisqus {}
 
 .unit {
