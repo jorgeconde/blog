@@ -32,6 +32,11 @@
 	margin-bottom: 20px;
 	list-style-type: none;
 }
+.blog-list li img {
+  display: none;
+}
+.blog-list li a {
+}
 .blog-list li+li {
 	padding-top: 20px;
   border-top: 1px solid $gray-lightest;
@@ -48,7 +53,7 @@
 }
 
 /* Show Article */
-.blog-post {padding-top: 80px; padding-bottom: 80px;}
+.blog-post {padding-top: 50px; padding-bottom: 50px; font-size: 110%;}
 .blog-post h2 {color: $gray-darker;}
 .blog-post h3,h4,h5,h6,strong {color: $gray-dark;}
 .blog-post img {width: 100%;}
